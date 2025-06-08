@@ -55,7 +55,7 @@ def get_filesize(f):
     return human_size(os.path.getsize(f"{upload_dir}/{f}"))
 
 @app.route("/all")
-async def f(req):
+async def all_files(req): # + upload form
 
     if not os.path.exists(upload_dir):
         os.mkdir(upload_dir)
